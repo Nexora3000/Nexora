@@ -1,0 +1,78 @@
+@charset "UTF-8";
+
+:root {
+    --gradient-Header: linear-gradient(90deg, #0052be, #00a2d3, #006dd3);
+    --gradient-Headera: linear-gradient(130deg, #006dd3, #00a2d3, #0052be, #006dd3, #00a2d3);
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0 auto;
+    padding: 0;
+    color: white;
+    background: radial-gradient(circle, #242a35, #11141a);
+}
+
+.corpicho {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+
+.coisa {
+    flex: 1;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.coisa h4 {
+    margin: 0;
+    font-size: 30px;
+}
+
+.coisa h1 {
+    font-size: 100px;
+    margin: 20px 0;
+}
+
+.button {
+    display: inline-block;
+    padding: 20px 40px;
+    background: var(--gradient-Header);
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.imagem {
+    max-width: 600px;
+    text-align: right;
+}
+
+.imagem img {
+    width: 100%;
+}
+
+.botao img:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(1px 1px 10px rgb(0, 153, 255));
+}
+
+.botao img {
+    width: 250px;
+    transition: 0.3s ease;
+}

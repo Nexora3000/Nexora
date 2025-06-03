@@ -1,0 +1,118 @@
+@charset "UTF-8";
+
+:root {
+    --gradient-Header: linear-gradient(90deg, #0052be, #00a2d3, #006dd3);
+    --gradient-Headera: linear-gradient(130deg, #006dd3, #00a2d3, #0052be, #006dd3, #00a2d3);
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    background: radial-gradient(circle, #242a35, #11141a);
+}
+
+.titulo {
+    display: inline-block;
+    background: var(--gradient-Header);
+    border-radius: 15px;
+    padding: 5px 40px;
+    box-sizing: border-box;
+    margin-top: 50px;
+    max-width: 90%;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#feedbacks {
+    background: var(--gradient-Header);
+    margin: 50px auto;
+    width: 90%;
+    border-radius: 15px;
+    padding: 2% 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.feedback {
+    background: #161b22;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 690px;
+    box-sizing: border-box;
+
+}
+.feedback p {
+
+font-size: 18px;
+
+}
+
+.feedback img {
+    width: 110px;
+    margin-bottom: 10px;
+}
+
+.feedback:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.quadrado {
+    display: inline-block;
+    border-radius: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+    align-items: center;
+    justify-content: center;
+}
+
+.quadrado img {
+    width: 160px;
+    margin-bottom: 15%;
+}
+
+.quadrada {
+    display: inline-block;
+    border-radius: 10px;
+    align-items: center;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+    justify-content: center;
+}
+
+.quadrada img {
+    width: 200px;
+    transition: 0.3s ease;
+}
+
+.quadrada img:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(1px 1px 10px rgb(0, 153, 255));
+}
+
+/* Responsividade opcional */
+@media (max-width: 640px) {
+    .feedback {
+        width: 90%;
+    }
+
+    #feedbacks {
+        width: 95%;
+    }
+    
+    .quadrado,
+    .quadrada {
+        margin-right: 50px;
+        margin-left: 50px;
+    }
+}
