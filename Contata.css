@@ -5,16 +5,14 @@
     --gradient-Headera: linear-gradient(130deg, #006dd3, #00a2d3, #0052be, #006dd3, #00a2d3);
 }
 
-html {
-    height: 100%;
-}
-
+html,
 body {
+    height: 100%;
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
     color: white;
-    text-align: center;
     background: radial-gradient(circle, #242a35, #11141a);
+    text-align: center;
 }
 
 .titulo {
@@ -22,24 +20,17 @@ body {
     background: var(--gradient-Header);
     border-radius: 15px;
     padding: 5px 40px;
-    box-sizing: border-box;
-    margin-top: 50px;
+    margin: 50px auto 10px;
     max-width: 90%;
-    font-weight: bold;
-    margin-bottom: 10px;
 }
 
 #logo {
-    color: white;
-    text-align: center;
     padding: 60px 20px;
     font-size: 24px;
     font-weight: bold;
-    position: relative;
 }
 
 nav {
-    display: block;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
 }
@@ -50,7 +41,7 @@ nav a {
     padding: 10px 40px;
 }
 
-#menu nav a:hover {
+nav a:hover {
     text-decoration: underline;
 }
 
@@ -58,18 +49,13 @@ nav a {
     background: var(--gradient-Header);
     padding: 20px;
     border-radius: 15px;
-    margin: 20px auto;
+    margin: 20px auto 90px;
     width: 50%;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-    margin-bottom: 90px;
-    
 }
 
 #contato h2 {
-    color: #ffffff;
     font-size: 25px;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: bold;
 }
 
 form {
@@ -99,26 +85,18 @@ input {
     background: var(--gradient-Header);
     color: white;
     border: none;
-    cursor: pointer;
     border-radius: 12px;
-    transition: 0.3s;
+    cursor: pointer;
     width: 100px;
-    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
-
-}
-
-.buto {
     font-size: 18px;
-    font-family: 'Times New Roman', Times, serif;
+    transition: 0.3s;
     font-weight: bold;
-
-
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 .buto:hover {
     transform: scale(1.2);
     filter: drop-shadow(1px 1px 10px rgb(44, 44, 44));
-
 }
 
 .star-rating {
@@ -130,11 +108,9 @@ input {
     direction: rtl;
     unicode-bidi: bidi-override;
     font-size: 0;
-    /* remove espaçamento natural */
     display: inline-flex;
     cursor: pointer;
     gap: 10px;
-    /* espaçamento entre estrelas */
 }
 
 .star-rating input {
@@ -144,9 +120,7 @@ input {
 .star-rating label {
     color: #ccc;
     font-size: 35px;
-    /* << AUMENTE O TAMANHO DAS ESTRELAS AQUI */
     transition: color 0.2s, transform 0.2s;
-    line-height: 1;
 }
 
 .star-rating input:checked~label,
@@ -155,14 +129,13 @@ input {
     color: gold;
     transform: scale(1.1);
     filter: drop-shadow(1px 1px 10px gold);
-
 }
 
-.quadrado {
+.quadrado,
+.quadrada {
     display: inline-block;
     border-radius: 10px;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin: 0 1.5%;
     align-items: center;
     justify-content: center;
 }
@@ -170,15 +143,6 @@ input {
 .quadrado img {
     width: 160px;
     margin-bottom: 15%;
-}
-
-.quadrada {
-    display: inline-block;
-    border-radius: 10px;
-    align-items: center;
-    margin-left: 1.5%;
-    margin-right: 1.5%;
-    justify-content: center;
 }
 
 .quadrada img {
@@ -191,12 +155,50 @@ input {
     filter: drop-shadow(1px 1px 10px rgb(0, 153, 255));
 }
 
-@media (max-width: 768px) {
-    body {
-        font-size: 14px;
-        padding: 0 10px;
-    }
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
 
+.popup-content {
+    background: radial-gradient(circle, #242a35, #11141a);
+    padding: 30px 40px;
+    border-radius: 15px;
+    border: 2px solid #00a2d3; /* Borda azul */
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    box-shadow: 0px 0px 10px rgb(0, 183, 255);
+}
+
+.popup-content button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: var(--gradient-Header);
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+    box-shadow: 2px 5px 10px rgb(0, 0, 0);
+}
+
+.popup-content button:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgb(0, 183, 255);
+}
+
+@media (max-width: 768px) {
     .titulo {
         padding: 5px 20px;
         font-size: 18px;
@@ -223,28 +225,14 @@ input {
     }
 
     input {
-    width: 80%;
         font-size: 14px;
     }
 
     .buto {
-    width: 100px;
         font-size: 16px;
-    }
-
-    .star-rating {
-        font-size: 0;
-        gap: 5px;
-        padding: 10px;
     }
 
     .star-rating label {
         font-size: 28px;
-    }
-
-    .quadrado,
-    .quadrada {
-        margin-right: 50px;
-        margin-left: 50px;
     }
 }
